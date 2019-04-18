@@ -7,3 +7,10 @@ $botman->hears('Hi', function ($bot) {
     $bot->reply('Hello!');
 });
 $botman->hears('Start conversation', BotManController::class.'@startConversation');
+
+
+
+$botman->fallback(function ($bot) {
+    $bot->reply("No entiendo que quieres decir, vuelve a
+        intentarlo.");
+});
