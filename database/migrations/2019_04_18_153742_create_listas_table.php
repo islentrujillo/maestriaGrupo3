@@ -15,7 +15,21 @@ class CreateListasTable extends Migration
     {
         Schema::create('listas', function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedInteger('clientes_id');
+            $table->unsignedInteger('estados_id');
+            $table->string('nombre');
+            $table->string('estado');
             $table->timestamps();
+
+            $table->foreign('clientes_id')
+                ->references('id')->on('clientes')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
+
+            $table->foreign('estados_id')
+                ->references('id')->on('estados')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
         });
     }
 

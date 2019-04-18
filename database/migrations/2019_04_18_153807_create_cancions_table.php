@@ -15,7 +15,22 @@ class CreateCancionsTable extends Migration
     {
         Schema::create('cancions', function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedInteger('listas_id');
+            $table->unsignedInteger('generos_id');
+            $table->string('nombre');
+            $table->string('interprete');
+            $table->integer('duración');
             $table->timestamps();
+
+            $table->foreign('listas_id')
+                ->references('id')->on('listas')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
+
+            $table->foreign('generos_id')
+                ->references('id')->on('generos')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
         });
     }
 
