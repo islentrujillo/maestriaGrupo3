@@ -12,17 +12,17 @@ class Lista extends Model
     ];
 
     public function cliente()
-        {
-            return $this->belongsTo('App\Cliente');
-        }
+    {
+        return $this->belongsTo('App\Cliente');
+    }
 
     public function estado()
-        {
-            return $this->belongsTo('App\Estado');
-        }
+    {
+        return $this->belongsTo('App\Estado');
+    }
 
     public function canciones()
-        {
-            return $this->hasMany('App\Cancion');
-        }
+    {
+        return $this->hasMany('App\Cancion');
+    }
 }

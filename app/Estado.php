@@ -11,7 +11,7 @@ class Estado extends Model
     ];
 
     public function listas()
-        {
-            return $this->hasMany('App\Lista');
-        }
+    {
+        return $this->hasMany('App\Lista');
+    }
 }
