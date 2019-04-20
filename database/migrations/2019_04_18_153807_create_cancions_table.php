@@ -19,7 +19,7 @@ class CreateCancionsTable extends Migration
             $table->unsignedInteger('generos_id');
             $table->string('nombre');
             $table->string('interprete');
-            $table->integer('duracion');
+            $table->string('duracion');
             $table->timestamps();
 
             $table->foreign('listas_id')
