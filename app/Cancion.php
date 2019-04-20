@@ -13,12 +13,12 @@ class Cancion extends Model
     ];
 
     public function lista()
-        {
-            return $this->belongsTo('App\Lista');
-        }
+    {
+        return $this->belongsTo('App\Lista');
+    }
 
     public function genero()
-        {
-            return $this->belongsTo('App\Genero');
-        }
+    {
+        return $this->belongsTo('App\Genero');
+    }
 }

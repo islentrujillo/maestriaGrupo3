@@ -17,8 +17,7 @@ class CreateListasTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('clientes_id');
             $table->unsignedInteger('estados_id');
-            $table->string('nombre');
-            $table->string('estado');
+            $table->string('nombre');            
             $table->timestamps();
 
             $table->foreign('clientes_id')
